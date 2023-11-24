@@ -27,40 +27,42 @@ const page = () => {
 
   return (
 
-<body>
+    <body>
 
 
-<div className='m-5 bg-yellow-900 h-40 '>
+      <div className='m-5 bg-yellow-600 h-40 '>
 
-<center>
+        <center className='m-10'>
 
-  <h1 className='text-5xl'>Food Recipe App</h1>
+          <h1 className='text-5xl m-3'>Food Recipe App</h1>
 
-  <form onSubmit={sumbitHandler}>
+          <h2 className='text-3xl bg-white'>Search Food Recipes</h2>
 
-    <input className='text-center rounded' type='text' placeholder='search any recipe' value={search} onChange={(e) => {
+          <form onSubmit={sumbitHandler} className='m-4'>
 
-      setsearch(e.target.value)
+            <input className='text-center rounded' type='text' placeholder='search any recipe' value={search} onChange={(e) => {
 
-    }} />
+              setsearch(e.target.value)
 
-    <input className='ml-5 bg-slate-400 rounded p-1' type='submit' value="Search" />
+            }} />
 
-  </form>
+            <input className='ml-5 bg-slate-400 rounded p-1' type='submit' value="Search" />
 
-</center>
+          </form>
 
-</div>
+        </center>
 
-<div>
+      </div>
 
-{data.length >= 1 ? <Products data = {data}/> : <center className='m-5'> <h2>No Recipe Found</h2></center>}
+      <div>
 
-</div>
+        {data.length >= 1 ? <Products data={data} /> : <center className='m-5'> <h2>No Recipe Found</h2></center>}
 
-</body>
+      </div>
 
-   
+    </body>
+
+
 
   )
 }
