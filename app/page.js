@@ -27,7 +27,7 @@ const page = () => {
 
   return (
 
-    <body>
+    <body className='bg-black'>
 
 
       <div className='m-5 bg-yellow-600 h-40 '>
